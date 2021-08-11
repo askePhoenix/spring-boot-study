@@ -42,7 +42,6 @@ public class UserController {
         return "redirect:/login";
     }
 
-
     @GetMapping("/login")
     public String loginView() {
         return "pages/login";

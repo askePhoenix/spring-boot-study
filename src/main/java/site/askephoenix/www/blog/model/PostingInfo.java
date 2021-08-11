@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import site.askephoenix.www.user.model.UserInfo;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -40,7 +41,8 @@ public class PostingInfo {
     private LocalDateTime updateTimeAt;
 
     @Builder
-    public PostingInfo( BlogInfo blogInfo, String title, String contents ){
+    public PostingInfo(BlogInfo blogInfo, String title, String contents, Long code){
+        this.code = code;
         this.blogInfo = blogInfo;
         this.title = title;
         this.contents = contents;

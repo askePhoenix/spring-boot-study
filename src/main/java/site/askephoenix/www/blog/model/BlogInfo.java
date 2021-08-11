@@ -31,9 +31,11 @@ public class BlogInfo {
 
 
     @Builder
-    public BlogInfo(CategoryInfo categoryInfo, UserInfo userInfo) {
+    public BlogInfo(CategoryInfo categoryInfo, UserInfo userInfo, Long code, String title) {
         this.categoryInfo = categoryInfo;
         this.userInfo = userInfo;
+        this.title = title;
+        this.code = code;
     }
 
 }
